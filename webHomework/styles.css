@@ -1,0 +1,31 @@
+body{
+    font-family: 'Consolas';
+    height: 100%;
+}
+div#center{
+    margin: auto;
+    max-width: 900px;
+    text-align: center;
+}
+td{
+    font-size: 96px;
+    text-decoration: underline;
+    background-color: lightblue;
+    padding: 16px;
+    text-align: center;
+}
+img{
+    float: left;
+    margin: 8px;
+}
+a:visited{
+    color: grey;
+}
+div#credits{
+    margin-bottom: 0;
+    position: fixed;
+    bottom: 8px;
+    right: 16px;
+    font-size: 16px;
+    font-style: italic;
+}

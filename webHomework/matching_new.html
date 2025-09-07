@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>HW4 - Matching Game</title>
+        <link rel="stylesheet" href="matching_new.css">
+    </head>
+    <body>
+        <div id="game-view">
+            
+            
+            <div id="game-active">
+                <table id="matching-game"></table>
+            </div>
+            <div id="game-preview">
+                <table id="preview"></table>
+            </div>
+        </div>
+        <div id="details-view">
+
+            <div id="rules">
+                Welcome to spubbyborp's picture matching game! <br> <br>
+                In this game, you will need to match each picture with its perfect copy! <br> <br>
+                You can choose between matching 8, 10, or 12 pictures,
+                and you'll be give 3, 5, or 8 seconds respectively to memorize them,
+                and 120, 150, or 180 seconds respectively to match them! <br> <br>
+                If you have an incorrect match, you'll be timed out for 3 seconds,
+                so be careful!<br>
+            </div>
+            <br>
+            <div id="start-game">
+                If you're ready to play...
+                <br>
+                How many pictures do you want to match? 
+                <br>
+                <input type="text" id="num_pics" name="num_pics" maxlength="2" size="3"/>
+                <input type="button" name="start_button" class="button" id="start_button" value="Start Game!" onclick="redirect()">
+                <br>
+                <br>
+                <br>
+            </div>
+            <h1>Score: <span id="score">0</span></h1>
+            <h1><span id="game-timer"> </span></h1>
+            <div id="mistake">
+                That ain't it <span id="mistake-timer"></span>
+            </div>
+            <div id="win"></div>
+        </div>
+        
+        
+        <div id="overlay">
+            
+        </div>
+        
+        <div id="credits">
+            Images made by spubbyborp
+            <p id=w3c>
+                <img style="border:0;width:88px;height:31px"
+                    src="valid-xhtml10.png"
+                    alt="Valid HTML!" />
+            </p>
+        </div>
+        <script src="matching_new.js"></script>
+    </body>
+</html>

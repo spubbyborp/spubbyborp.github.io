@@ -6,8 +6,8 @@ text adventure game to bring awareness about trans experiences in medical practi
 link: https://spubbyborp.github.io/Gendertwine  
 
 # Web Programming Fall 2020
-homepage hw assignment  
-link:
+homework
+link: https://spubbyborp.github.io/webHomework
 
 # Game Dev
 PC14

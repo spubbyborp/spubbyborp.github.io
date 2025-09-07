@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>HW4 - Guessing Game</title>
+        
+        <link rel="stylesheet" href="guessing_game.css">
+    </head>
+    <body>
+        <audio id="correctGuess"><source src="sounds/correct_guess.wav" type="audio/wav"></audio>
+        <audio id="tooLow"><source src="sounds/too_low.wav" type="audio/wav"></audio>
+        <audio id="tooHigh"><source src="sounds/too_high.wav" type="audio/wav"></audio>
+        <audio id="outOfGuesses"><source src="sounds/out_of_guesses.wav" type="audio/wav"></audio>
+        <audio id="tick"><source src="sounds/tick.wav" type="audio/wav"></audio>
+        <audio id="startGame"><source src="sounds/start_game.wav" type="audio/wav"></audio>
+        <div id="center">
+            <div id="gamebox">
+                <h1 id="time">
+                <h1>Guessing Game</h1>
+
+                <h2>I am thinking of a number from 1 to 100, can you guess it?</h2>
+                <img src="guess_images/spubby.gif">
+
+                <h2 id="status">Guess a Number!</h2>
+
+
+                    <input type=text name="guess" id="guess" maxlength="3" size=3 autofocus/>
+                    <input type="button" value="Guess!" name="guess_button" id="guess_button" onclick="guessResponse()"/>
+
+                <h2 id="guesses">You have 7 lives left!</h2>
+                <div id="lives"></div>
+
+                <div id="game_timer"></div>
+                <a href="matching_new.html">Link to Matching Game</a>
+            </div>
+        </div>
+        <script type="text/javascript" src="guessing_game.js"></script>
+
+        <div id="credits">
+            Images made by spubbyborp
+            <p id=w3c>
+                <img style="border:0;width:88px;height:31px"
+                    src="valid-xhtml10.png"
+                    alt="Valid HTML!" />
+            </p>
+        </div>
+        
+    </body>
+</html>

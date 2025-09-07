@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <title>HW 4 - Matching game</title>
+        <link rel="stylesheet" href="matching_game.css">
+    </head>
+    <body onload="sortTable()">
+        <script src="matching_game.js"></script>
+           
+
+            <!--How many pictures do you want to match? 
+            <input type="radio" id="8" name="num_pics" value="8"/>
+            <label for="8"> 8 </label>
+            <input type="radio" id="10" name="num_pics" value="10"/>
+            <label for="10"> 10 </label>
+            <input type="radio" id="12" name="num_pics" value="12"/>
+            <label for="12"> 12 </label>-->
+
+            <!--code referenced from Marina Ferreira (freeCodeCamp)
+            https://medium.com/free-code-camp/vanilla-javascript-tutorial-build-a-memory-game-in-30-minutes-e542c4447eae-->
+
+            <!--<input type="button" name="start_button" id="start_button" value="Start Game!">-->
+            <div id="center">
+            <ul id="memory_game">
+                    <li>
+                        <div class="memory_card">
+                            <div class="memory_card_inner">
+                                <div class="front_face">
+                                    <img src="match_images/image1.png" alt="image1">
+                                </div> 
+                                <div class="back_face">
+                                    <img src="match_images/front_image.png" alt="back">
+                                </div> 
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="memory_card">
+                            <div class="memory_card_inner">
+                                <div class="front_face">
+                                    <img src="match_images/image1.png" alt="image1">
+                                </div> 
+                                <div class="back_face">
+                                    <img src="match_images/front_image.png" alt="back">
+                                </div> 
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="memory_card">
+                            <div class="memory_card_inner">
+                                <div class="front_face">
+                                    <img src="match_images/image2.png" alt="image2">
+                                </div> 
+                                <div class="back_face">
+                                    <img src="match_images/front_image.png" alt="back">
+                                </div> 
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="memory_card">
+                            <div class="memory_card_inner">
+                                <div class="front_face">
+                                    <img src="match_images/image2.png" alt="image2">
+                                </div> 
+                                <div class="back_face">
+                                    <img src="match_images/front_image.png" alt="back">
+                                </div> 
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="memory_card">
+                            <div class="memory_card_inner">
+                                <div class="front_face">
+                                    <img src="match_images/image3.png" alt="image3">
+                                </div> 
+                                <div class="back_face">
+                                    <img src="match_images/front_image.png" alt="back">
+                                </div> 
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="memory_card">
+                            <div class="memory_card_inner">
+                                <div class="front_face">
+                                    <img src="match_images/image3.png" alt="image3">
+                                </div> 
+                                <div class="back_face">
+                                    <img src="match_images/front_image.png" alt="back">
+                                </div> 
+                            </div>
+                        </div>
+                    </li>        
+                
+                
+                    <li>
+                        <div class="memory_card">
+                            <div class="memory_card_inner">
+                                <div class="front_face">
+                                    <img src="match_images/image4.png" alt="image4">
+                                </div> 
+                                <div class="back_face">
+                                    <img src="match_images/front_image.png" alt="back">
+                                </div> 
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="memory_card">
+                            <div class="memory_card_inner">
+                                <div class="front_face">
+                                    <img src="match_images/image4.png" alt="image4">
+                                </div> 
+                                <div class="back_face">
+                                    <img src="match_images/front_image.png" alt="back">
+                                </div> 
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="memory_card">
+                            <div class="memory_card_inner">
+                                <div class="front_face">
+                                    <img src="match_images/image5.png" alt="image5">
+                                </div> 
+                                <div class="back_face">
+                                    <img src="match_images/front_image.png" alt="back">
+                                </div> 
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="memory_card">
+                            <div class="memory_card_inner">
+                                <div class="front_face">
+                                    <img src="match_images/image5.png" alt="image5">
+                                </div> 
+                                <div class="back_face">
+                                    <img src="match_images/front_image.png" alt="back">
+                                </div> 
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="memory_card">
+                            <div class="memory_card_inner">
+                                <div class="front_face">
+                                    <img src="match_images/image6.png" alt="image6">
+                                </div> 
+                                <div class="back_face">
+                                    <img src="match_images/front_image.png" alt="back">
+                                </div> 
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="memory_card">
+                            <div class="memory_card_inner">
+                                <div class="front_face">
+                                    <img src="match_images/image6.png" alt="image6">
+                                </div> 
+                                <div class="back_face">
+                                    <img src="match_images/front_image.png" alt="back">
+                                </div> 
+                            </div>
+                        </div>
+                    </li>
+                
+                
+                    <li>
+                        <div class="memory_card">
+                            <div class="memory_card_inner">
+                                <div class="front_face">
+                                    <img src="match_images/image7.png" alt="image7">
+                                </div> 
+                                <div class="back_face">
+                                    <img src="match_images/front_image.png" alt="back">
+                                </div> 
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="memory_card">
+                            <div class="memory_card_inner">
+                                <div class="front_face">
+                                    <img src="match_images/image7.png" alt="image7">
+                                </div> 
+                                <div class="back_face">
+                                    <img src="match_images/front_image.png" alt="back">
+                                </div> 
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="memory_card">
+                            <div class="memory_card_inner">
+                                <div class="front_face">
+                                    <img src="match_images/image8.png" alt="image8">
+                                </div> 
+                                <div class="back_face">
+                                    <img src="match_images/front_image.png" alt="back">
+                                </div> 
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="memory_card">
+                            <div class="memory_card_inner">
+                                <div class="front_face">
+                                    <img src="match_images/image8.png" alt="image8">
+                                </div> 
+                                <div class="back_face">
+                                    <img src="match_images/front_image.png" alt="back">
+                                </div> 
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="memory_card">
+                            <div class="memory_card_inner">
+                                <div class="front_face">
+                                    <img src="match_images/image9.png" alt="image9">
+                                </div> 
+                                <div class="back_face">
+                                    <img src="match_images/front_image.png" alt="back">
+                                </div> 
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="memory_card">
+                            <div class="memory_card_inner">
+                                <div class="front_face">
+                                    <img src="match_images/image9.png" alt="image9">
+                                </div> 
+                                <div class="back_face">
+                                    <img src="match_images/front_image.png" alt="back">
+                                </div> 
+                            </div>
+                        </div>
+                    </li>
+                
+                
+                    <li>
+                        <div class="memory_card">
+                            <div class="memory_card_inner">
+                                <div class="front_face">
+                                    <img src="match_images/image10.png" alt="image10">
+                                </div> 
+                                <div class="back_face">
+                                    <img src="match_images/front_image.png" alt="back">
+                                </div> 
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="memory_card">
+                            <div class="memory_card_inner">
+                                <div class="front_face">
+                                    <img src="match_images/image10.png" alt="image10">
+                                </div> 
+                                <div class="back_face">
+                                    <img src="match_images/front_image.png" alt="back">
+                                </div> 
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="memory_card">
+                            <div class="memory_card_inner">
+                                <div class="front_face">
+                                    <img src="match_images/image11.png" alt="image11">
+                                </div> 
+                                <div class="back_face">
+                                    <img src="match_images/front_image.png" alt="back">
+                                </div> 
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="memory_card">
+                            <div class="memory_card_inner">
+                                <div class="front_face">
+                                    <img src="match_images/image11.png" alt="image11">
+                                </div> 
+                                <div class="back_face">
+                                    <img src="match_images/front_image.png" alt="back">
+                                </div> 
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="memory_card">
+                            <div class="memory_card_inner">
+                                <div class="front_face">
+                                    <img src="match_images/image12.png" alt="image12">
+                                </div> 
+                                <div class="back_face">
+                                    <img src="match_images/front_image.png" alt="back">
+                                </div> 
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="memory_card">
+                            <div class="memory_card_inner">
+                                <div class="front_face">
+                                    <img src="match_images/image12.png" alt="image12">
+                                </div> 
+                                <div class="back_face">
+                                    <img src="match_images/front_image.png" alt="back">
+                                </div> 
+                            </div>
+                        </div>
+                    </li>
+            </ul>
+        </div>
+
+    </body>
+</html>

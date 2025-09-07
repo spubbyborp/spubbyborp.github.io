@@ -1,0 +1,47 @@
+/*
+    Payroll program created by spubbyborp
+    Fall 2020, Web Programming
+    GSU
+*/ 
+body{
+    font-family: 'Consolas';
+    height: 100%;
+}
+.content{
+    max-width: 500px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid lightblue;
+
+}
+table{
+    margin-left: auto;
+    margin-right: auto;
+}
+/*div.output{
+    border: 4px solid black;
+    width: 75%;
+}*/
+th, td{
+    border: 1px solid black;
+    width: 100px;
+    height: 64px;
+}
+
+#add_button{
+    color: white;
+    background-color: black;
+    font-family: 'Consolas';
+    border-radius: 3px;
+    height: 40px;
+    font-size: 18px;
+    border: 2px solid aqua;
+}
+div#credits{
+    position: fixed;
+    bottom: 8px;
+    right: 16px;
+    font-size: 16px;
+    font-style: italic;
+}

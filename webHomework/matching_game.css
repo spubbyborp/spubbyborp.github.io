@@ -1,0 +1,87 @@
+body{
+    font-family: 'Consolas';
+}
+div#center{
+    margin: auto;
+    max-width: 1400px;
+}
+div#credits{
+    margin-bottom: 0;
+    position: fixed;
+    bottom: 8px;
+    right: 16px;
+    font-size: 16px;
+    font-style: italic;
+}
+#start_button{
+    color: white;
+    background-color: black;
+    font-family: 'Consolas';
+    border-radius: 3px;
+    height: 40px;
+    font-size: 18px;
+    border: 2px solid aqua;
+}
+div#gamebox{
+    border: 4px solid lightblue;
+    padding: 30px;
+    width: 800px;
+    text-align: center;
+
+}
+
+.memory_game{
+    width: 1200px;
+    height: 800px;
+    margin: auto;
+}
+
+.memory_card{
+    background-color:aqua;
+    width: 200px;
+    height: 200px;
+    margin: 5px;
+    perspective: 1000px;
+    display: flex;
+}
+
+.memory_card_inner{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+
+.memory_card:active .memory_card_inner{
+    transform: rotateY(180deg);
+}
+
+.front_face, .back_face{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+}
+img{
+    border-radius: 4px;
+    width: 200px;
+    height: 200px;
+}
+.front_face{
+    transform: rotateY(180deg);
+}
+ul {
+    list-style-type: none; /* Remove bullets */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margins */
+    display: flex;
+    flex-wrap: wrap;
+  }
+  li{
+      display: flex;
+  }

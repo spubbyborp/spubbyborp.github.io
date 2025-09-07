@@ -1,0 +1,129 @@
+body{
+  font-family: "Comic Sans MS";
+  margin: 0;
+}
+img.card{
+    height: 200px;
+    width: 200px;
+    border-radius: 8px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+img.card:hover {
+    /* Start the shake animation and make the animation last for 0.5 seconds */
+    animation: shake 0.5s;
+  
+    /* When the animation is finished, start again */
+    animation-iteration-count: infinite;
+  }
+
+div#page{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    position: relative;
+}
+div#game-active{
+  display: none;
+  background-color: aqua;
+}
+div#game-preview{
+  display: none;
+  z-index: 9;
+  background-color: aqua;
+}
+a:visited{
+  color: yellow;
+}
+table{
+  margin: auto;
+}
+div#game-view{
+  position: absolute;
+  width: 68%;
+  right: 0;
+  padding-top: 30px;
+  height: calc(100% - 30px);
+  margin-left: auto;
+  margin-right: auto;
+  background-color: blue;
+  background-repeat: repeat;
+}
+div#details-view{
+  text-align: center;
+  width: 32%;
+  height: 100%;
+  margin-right: 32px;
+  position: absolute;
+  left: 20;
+  color: white;
+  background-color: blue;
+}
+
+div#rules{
+  padding: 50px;
+  font-size: 18px;
+}
+
+div#start-game{
+  font-size: 22px;
+}
+div#mistake{
+  font-size: 64px;
+  color: red;
+  text-align: center;
+  display:none;
+}
+.button{
+  color: white;
+  background-color: black;
+  font-family: 'Consolas';
+  border-radius: 3px;
+  height: 40px;
+  font-size: 18px;
+  border: 2px solid aqua;
+}
+/*
+overlay effect referenced from w3schools
+https://www.w3schools.com/howto/howto_css_overlay.asp
+*/
+#overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0);
+    z-index: 0;
+    
+  }
+/*
+shake animation referenced form w3schools
+https://www.w3schools.com/howto/howto_css_shake_image.asp
+*/
+  @keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }
+  div#credits{
+    margin-bottom: 0;
+    position: fixed;
+    bottom: 8px;
+    left: 16px;
+    color: white;
+    font-size: 16px;
+    font-style: italic;
+}
