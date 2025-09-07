@@ -7,7 +7,7 @@ link: https://spubbyborp.github.io/Gendertwine
 
 # Web Programming Fall 2020
 homework
-link: https://spubbyborp.github.io/webHomework
+link: https://spubbyborp.github.io/webHomework/index.html
 
 # Game Dev
 PC14
